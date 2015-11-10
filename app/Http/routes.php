@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 
+Route::group(['prefix' => 'api'], function()
+{
+    Route::get('authenticate', ['middleware' => 'jwt.auth', 'uses' => 'Auth\TokenBasedController@index']);
+    Route::post('authenticate', 'Auth\TokenBasedController@authenticate');
+});
