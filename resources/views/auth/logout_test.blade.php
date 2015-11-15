@@ -1,13 +1,6 @@
-@extends('layouts.public')
+@extends('layouts.private')
 
 @section('content')
-
-@if($errors->any())
-    <div class="alert alert-danger">
-        {{$errors->first()}}
-    </div>
-@endif
-
 
 <section class="projects">
     {{--@foreach($projects as $project)--}}

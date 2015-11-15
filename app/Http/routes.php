@@ -18,6 +18,30 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api'], function()
 {
-    Route::get('authenticate', ['middleware' => 'jwt.auth', 'uses' => 'Auth\TokenBasedController@index']);
+    Route::get('authenticate', ['middleware' => ['jwt.auth'/*, 'jwt.refresh'*/], 'uses' => 'Auth\TokenBasedController@index']);
+    Route::get('invalidate', ['middleware' => 'jwt.auth', 'uses' => 'Auth\TokenBasedController@invalidate']);
     Route::post('authenticate', 'Auth\TokenBasedController@authenticate');
 });
+
+
+
+Route::get('dashboard', ['middleware' => 'jwt.auth', 'uses' => 'Dashboard\DashboardController@index']);
+
+
+// Authentication routes
+Route::get('login', 'Auth\AuthController@getLogin');
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
+
+// Registration routes
+Route::group(['middleware' => 'config.registration'], function(){
+    Route::get('register', 'Auth\AuthController@getRegister');
+    Route::post('register', 'Auth\AuthController@postRegister');
+});
+
+
+// Password routes
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+Route::get('password/reset', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');

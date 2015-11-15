@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b696be91b3d02f8cf566a3bc37059053",
-    "content-hash": "c574cd64c6da11ea0b5e5bff5a05d581",
+    "hash": "a51a8b0cadfd83765a316184ac0ed678",
+    "content-hash": "6b2ec452e5630ab4cf336cc4839bbfe4",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -69,6 +69,46 @@
                 "sublime"
             ],
             "time": "2015-08-13 11:40:00"
+        },
+        {
+            "name": "bootflat/bootflat",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bootflat/bootflat.github.io.git",
+                "reference": "3fa37732cd5b2b97d4f8d101e0c1fcd4db39bf32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bootflat/bootflat.github.io/zipball/3fa37732cd5b2b97d4f8d101e0c1fcd4db39bf32",
+                "reference": "3fa37732cd5b2b97d4f8d101e0c1fcd4db39bf32",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bootflat",
+                    "email": "info@flathemes.com"
+                }
+            ],
+            "description": "An open source Flat UI KIT based on Bootstrap (3.2.0). A faster, easier and less repetitive way for web developers to create elegant web apps.",
+            "homepage": "http://bootflat.github.io/",
+            "keywords": [
+                "CSS3",
+                "HTML5",
+                "bootflat",
+                "bootstrap",
+                "flat",
+                "flat ui",
+                "mobile",
+                "scss",
+                "ui"
+            ],
+            "time": "2014-09-03 07:34:25"
         },
         {
             "name": "classpreloader/classpreloader",

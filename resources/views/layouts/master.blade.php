@@ -10,5 +10,6 @@
             @yield('content')
         </div>
         @yield('footer')
+        @yield('js')
     </body>
 </html>

@@ -12,5 +12,22 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+
     mix.sass('app.scss');
+
+
+    // Vendor
+    mix.styles([
+        'vendor/bootflat/bootflat/css/bootstrap.min.css',
+        'vendor/bootflat/bootflat/bootflat/css/bootflat.css'
+    ], 'public/css/vendor.css', './');
+
+    mix.scripts([
+        'vendor/bootflat/bootflat/js/jquery-1.10.1.min.js',
+        'vendor/bootflat/bootflat/js/bootstrap.min.js',
+        'vendor/bootflat/bootflat/bootflat/js/icheck.min.js',
+        'vendor/bootflat/bootflat/bootflat/js/jquery.fs.selecter.min.js',
+        'vendor/bootflat/bootflat/bootflat/js/jquery.fs.stepper.min.js'
+
+    ], 'public/js/vendor.js', './');
 });
