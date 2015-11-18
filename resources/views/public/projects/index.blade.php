@@ -2,11 +2,8 @@
 
 @section('content')
 
-@if($errors->any())
-    <div class="alert alert-danger">
-        {{$errors->first()}}
-    </div>
-@endif
+    @include('partials.message')
+    @include('partials.errors')
 
 
 <section class="projects">

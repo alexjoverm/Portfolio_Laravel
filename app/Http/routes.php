@@ -37,6 +37,11 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 Route::group(['middleware' => 'config.registration'], function(){
     Route::get('register', 'Auth\AuthController@getRegister');
     Route::post('register', 'Auth\AuthController@postRegister');
+
+    Route::get('register/verify/{confirmationCode}', [
+        'as' => 'confirmation_path',
+        'uses' => 'Auth\AuthController@confirm'
+    ]);
 });
 
 
@@ -45,3 +50,15 @@ Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
+
+//Route::get('sendemail', function () {
+//
+//    Mail::send('email.verify', ['confirmation_code' => str_random(30)], function ($message) {
+//
+//        $message->to('kandel_agost89@hotmail.com')->subject('Learning Laravel test email');
+//
+//    });
+//
+//    return "Your email has been sent successfully";
+//
+//});
