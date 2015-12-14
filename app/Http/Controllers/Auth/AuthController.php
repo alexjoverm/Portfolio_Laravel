@@ -27,6 +27,7 @@ class AuthController extends Controller
     use AuthTrait, ThrottlesLogins;
 
     private $redirectTo = '/';
+    protected $loginPath = '/login';
 
     /**
      * Create a new authentication controller instance.

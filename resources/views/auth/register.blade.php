@@ -9,7 +9,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">Register</div>
         <div class="panel-body">
-            {!! Form::model(['url' => 'auth/register']) !!}
+            {!! Form::model(['url' => 'register']) !!}
 
             <div class="form-group row {{ ($errors->first('name')) ? 'has-error'  :''}}">
                 {!!Form::label('name','Name', ['class' => 'col-md-4 control-label'])!!}

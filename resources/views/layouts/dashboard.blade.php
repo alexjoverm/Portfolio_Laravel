@@ -7,7 +7,7 @@
 @endsection
 
 @section('header')
-    <header>DASHBOARD</header>
+    @include('partials.navbar')
 @endsection
 
 @section('footer')

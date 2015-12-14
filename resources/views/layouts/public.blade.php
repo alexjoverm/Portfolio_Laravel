@@ -11,7 +11,7 @@
 @endsection
 
 @section('header')
-    <header>PUBLIC</header>
+    @include('partials.navbar')
 @endsection
 
 @section('footer')
